@@ -1,1 +1,28 @@
-<p>banca works!</p>
+<div class="p-d-flex p-jc-center p-ai-center form-wrapper">
+  <div class="p-card p-shadow-3" style="padding: 20px;">
+    <div class="p-fluid">
+      <h2>Registrazione Conto</h2>
+
+      <p *ngIf="message" [ngClass]="{'p-error': passwordExists || userLimitReached, 'p-success': messageSuccess}">{{ message }}</p>
+
+      <fieldset>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="p-field">
+              <label for="firstName">Nome</label>
+              <input type="text" id="firstName" pInputText formControlName="firstName" [disabled]="userLimitReached">
+            </div>
+            <div class="p-field">
+              <label for="lastName">Cognome</label>
+              <input type="text" id="lastName" pInputText formControlName="lastName" [disabled]="userLimitReached">
+            </div>
+            <div class="p-field">
+              <label for="password">Password</label>
+              <p-password id="password" formControlName="password" [toggleMask]="true" [disabled]="userLimitReached"></p-password>
+            </div>
+            <button pButton type="submit" label="Registrati" [disabled]="registerForm.invalid"></button>
+        </form>
+      </fieldset>
+    </div>
+  </div>
+</div>
+

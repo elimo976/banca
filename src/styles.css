@@ -5,15 +5,19 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 60px;
 }
 main {
   padding: 1.2rem;
 }
 
 .footer {
+  width: 100%;
   background-color: var(--primary-color);
   color: var(--surface-a);
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
 }
 

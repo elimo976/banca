@@ -1,1 +1,21 @@
+.form-wrapper {
+  width: 400px;
+  margin: 5rem auto 0 auto;
+}
 
+.p-success {
+  color: green;
+}
+
+fieldset {
+  border: 1px solid #dadada;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.p-field {
+  margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+  padding: .7rem 0;
+}
